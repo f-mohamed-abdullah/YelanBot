@@ -4,6 +4,7 @@ import com.abu.bot.events.EventListener;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
 
@@ -20,6 +21,8 @@ public class yelanBot {
         bot.setActivity(Activity.playing("Genshin Impact")).setStatus(OnlineStatus.ONLINE);
 
         shardmanager = bot.build();
+
+        bot.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.GUILD_PRESENCES);
 
         shardmanager.addEventListener(new EventListener());
     }
