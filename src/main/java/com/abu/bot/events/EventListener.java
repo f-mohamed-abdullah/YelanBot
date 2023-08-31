@@ -6,9 +6,13 @@ import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
+import net.dv8tion.jda.api.entities.sticker.GuildSticker;
+import net.dv8tion.jda.api.events.channel.ChannelCreateEvent;
+import net.dv8tion.jda.api.events.channel.ChannelDeleteEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
+import net.dv8tion.jda.api.events.sticker.GuildStickerAddedEvent;
 import net.dv8tion.jda.api.events.user.update.UserUpdateOnlineStatusEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.w3c.dom.Text;
@@ -56,6 +60,26 @@ public class EventListener extends ListenerAdapter {
         event.getGuild().getTextChannelById("1146753250893254727").sendMessage(message).queue();
     }
 
+
+    @Override
+    public void onChannelCreate(ChannelCreateEvent event) {
+        String newChannel = event.getChannel().getAsMention();
+
+        String message = newChannel+" channel was created in the "+event.getGuild().getName();
+
+       event.getGuild().getTextChannelById("1146763344984948838").sendMessage(message).queue();
+    }
+
+    @Override
+    public void onChannelDelete(ChannelDeleteEvent event) {
+        String delchannel = event.getChannel().getName();
+
+
+        String message = "'"+delchannel+"' Channel was deleted from '"+event.getGuild().getName()+"'";
+
+        event.getGuild().getTextChannelById("1146765293721497680").sendMessage(message).queue();
+    }
+
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
     	
@@ -66,6 +90,14 @@ public class EventListener extends ListenerAdapter {
     	String message ="Welcome to the server Mr/Ms."+username.getAsMention()+" </3";
     	
     	event.getGuild().getTextChannelById("1146096682996596837").sendMessage(message).queue();
+    }
+
+    @Override
+    public void onGuildStickerAdded(GuildStickerAddedEvent event) {
+
+//        GuildSticker sticker = event.getSticker();
+        String message = "New Stickers are added to this server!!!";
+        event.getGuild().getTextChannelById("1146767959499473026").sendMessage(message).queue();
     }
 
 
