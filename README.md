@@ -6,4 +6,3 @@
 # ⚠️ Yelan is in under training ⚠️
 
 
-![yelan-3](https://github.com/f-mohamed-abdullah/YelanBot/assets/115330277/4443896e-7458-4ae0-8b2c-e2643f69abc6)
