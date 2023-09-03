@@ -44,21 +44,21 @@ public class EventListener extends ListenerAdapter {
     }
 
 
-    @Override
-    public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getAuthor().isBot()){
-            return;
-        }
-
-        User username = event.getAuthor();
-
-
-        String channel = event.getChannel().getAsMention();
-
-        String message = username.getAsMention()+" messaged in "+channel+" Channel";
-
-        event.getGuild().getTextChannelById("1146753250893254727").sendMessage(message).queue();
-    }
+//    @Override
+//    public void onMessageReceived(MessageReceivedEvent event) {
+//        if (event.getAuthor().isBot()){
+//            return;
+//        }
+//
+//        User username = event.getAuthor();
+//
+//
+//        String channel = event.getChannel().getAsMention();
+//
+//        String message = username.getAsMention()+" messaged in "+channel+" Channel";
+//
+//        event.getGuild().getTextChannelById("1146753250893254727").sendMessage(message).queue();
+//    }
 
 
     @Override

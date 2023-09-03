@@ -1,5 +1,6 @@
 package com.abu.bot;
 
+import com.abu.bot.commands.commandManager;
 import com.abu.bot.events.EventListener;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -24,7 +25,7 @@ public class yelanBot {
 
         bot.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.GUILD_PRESENCES);
 
-        shardmanager.addEventListener(new EventListener());
+        shardmanager.addEventListener(new EventListener() , new commandManager());
     }
 
     private static String getenvToken() {
