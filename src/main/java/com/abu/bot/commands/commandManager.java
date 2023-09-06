@@ -36,10 +36,15 @@ public class commandManager extends ListenerAdapter {
         }
         else if (command.equals("ily")) {
             ArrayList<String> cutePicsofYelan = new ArrayList<>();
-            cutePicsofYelan.add("images/ily/cute.jpg");
+            cutePicsofYelan.add("images/ily/cute1.jpg");
             cutePicsofYelan.add("images/ily/cute2.jpg");
+            cutePicsofYelan.add("images/ily/cute3.jpg");
+            cutePicsofYelan.add("images/ily/cute4.jpg");
+            cutePicsofYelan.add("images/ily/cute5.jpg");
+
             String username = event.getUser().getAsMention();
-            String path = cutePicsofYelan.get(getRandomNumberUsingNextInt(1,cutePicsofYelan.size()-1));
+            int index = new Random().nextInt(cutePicsofYelan.size());
+            String path = cutePicsofYelan.get(index);
             File f = new File(path);
 
             event.replyFiles(FileUpload.fromData(f)).queue();
@@ -59,8 +64,8 @@ public class commandManager extends ListenerAdapter {
         event.getGuild().updateCommands().addCommands(commandData).queue();
     }
 
-    public int getRandomNumberUsingNextInt(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
-    }
+//    public int getRandomNumberUsingNextInt(int size) {
+//        Random random = new Random();
+//        return random.nextInt(max -;
+//    }
 }
