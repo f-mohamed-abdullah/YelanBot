@@ -1,7 +1,11 @@
 package com.abu.bot.commands;
 
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
+import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
+import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
+import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.build.CommandData;
@@ -17,6 +21,7 @@ import java.util.List;
 import java.util.Random;
 
 public class commandManager extends ListenerAdapter {
+
 
 
     @Override
@@ -53,6 +58,20 @@ public class commandManager extends ListenerAdapter {
         }
     }
 
+    @Override
+    public void onGuildMemberJoin(GuildMemberJoinEvent event) {
+
+        TextChannel channel = event.getGuild().getTextChannelById("1146096682996596837");
+        Member mem = event.getMember();
+        channel.sendMessage("Welcome to the server amigo "+mem.getAsMention()).queue();
+    }
+
+    @Override
+    public void onGuildMemberRemove(GuildMemberRemoveEvent event) {
+        Member mem = event.getMember();
+        TextChannel channel = event.getGuild().getTextChannelById("1146096682996596837");
+        channel.sendMessage(mem.getAsMention()+" is removeed from server!!!").queue();
+    }
 
     @Override
     public void onGuildReady(GuildReadyEvent event) {

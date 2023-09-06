@@ -80,25 +80,9 @@ public class EventListener extends ListenerAdapter {
         event.getGuild().getTextChannelById("1146765293721497680").sendMessage(message).queue();
     }
 
-    @Override
-    public void onGuildMemberJoin(GuildMemberJoinEvent event) {
-    	
 
-    	
-        User username = event.getUser();
-    	
-    	String message ="Welcome to the server Mr/Ms."+username.getAsMention()+" </3";
-    	
-    	event.getGuild().getTextChannelById("1146096682996596837").sendMessage(message).queue();
-    }
 
-    @Override
-    public void onGuildStickerAdded(GuildStickerAddedEvent event) {
 
-//        GuildSticker sticker = event.getSticker();
-        String message = "New Stickers are added to this server!!!";
-        event.getGuild().getTextChannelById("1146767959499473026").sendMessage(message).queue();
-    }
 
 
 }
