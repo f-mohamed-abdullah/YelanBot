@@ -31,7 +31,7 @@ public class commandManager extends ListenerAdapter {
             String username = event.getUser().getAsMention();
             event.reply("Welcome to the server "+username+" 💖!!!").queue();
         }
-        else if (command.equals("showallroles")) {
+        if (command.equals("showallroles")) {
             event.deferReply().queue();
             String response = "";
             for (Role role : event.getGuild().getRoles()){
@@ -46,6 +46,8 @@ public class commandManager extends ListenerAdapter {
             cutePicsofYelan.add("images/ily/cute3.jpg");
             cutePicsofYelan.add("images/ily/cute4.jpg");
             cutePicsofYelan.add("images/ily/cute5.jpg");
+            cutePicsofYelan.add("images/ily/cute6.jpg");
+            cutePicsofYelan.add("images/ily/cute7.jpg");
 
             String username = event.getUser().getAsMention();
             int index = new Random().nextInt(cutePicsofYelan.size());
@@ -58,20 +60,7 @@ public class commandManager extends ListenerAdapter {
         }
     }
 
-    @Override
-    public void onGuildMemberJoin(GuildMemberJoinEvent event) {
 
-        TextChannel channel = event.getGuild().getTextChannelById("1146096682996596837");
-        Member mem = event.getMember();
-        channel.sendMessage("Welcome to the server amigo "+mem.getAsMention()).queue();
-    }
-
-    @Override
-    public void onGuildMemberRemove(GuildMemberRemoveEvent event) {
-        Member mem = event.getMember();
-        TextChannel channel = event.getGuild().getTextChannelById("1146096682996596837");
-        channel.sendMessage(mem.getAsMention()+" is removeed from server!!!").queue();
-    }
 
     @Override
     public void onGuildReady(GuildReadyEvent event) {

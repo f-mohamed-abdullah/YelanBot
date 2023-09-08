@@ -10,6 +10,8 @@ import net.dv8tion.jda.api.entities.sticker.GuildSticker;
 import net.dv8tion.jda.api.events.channel.ChannelCreateEvent;
 import net.dv8tion.jda.api.events.channel.ChannelDeleteEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
+import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.events.sticker.GuildStickerAddedEvent;
@@ -81,6 +83,17 @@ public class EventListener extends ListenerAdapter {
     }
 
 
+    @Override
+    public void onGuildMemberJoin(GuildMemberJoinEvent event) {
+
+    }
+
+    @Override
+    public void onGuildMemberRemove(GuildMemberRemoveEvent event) {
+        Member mem = event.getMember();
+        TextChannel channel = event.getGuild().getTextChannelById("1146096682996596837");
+        channel.sendMessage(mem.getAsMention()+" is removed from server!!!").queue();
+    }
 
 
 
