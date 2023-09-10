@@ -1,31 +1,29 @@
 package com.abu.bot;
 
 import com.abu.bot.commands.commandManager;
-import com.abu.bot.events.EventListener;
+import com.abu.bot.events.ChannelCreateandDelete;
+import com.abu.bot.events.GuildJoinandLeave;
 import io.github.cdimascio.dotenv.Dotenv;
-import net.dv8tion.jda.api.OnlineStatus;
-import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
-import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
-import net.dv8tion.jda.api.sharding.ShardManager;
 
 
 
 public class yelanBot {
 
-    ShardManager shardmanager;
+
+    JDA botManager ;
     public yelanBot() {
         String token = getenvToken();
+        JDABuilder builder = JDABuilder.createDefault(token);
 
-        DefaultShardManagerBuilder bot = DefaultShardManagerBuilder.createDefault(token);
+        builder.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.GUILD_PRESENCES);
+        builder.addEventListeners(new ChannelCreateandDelete(),new commandManager(),new GuildJoinandLeave());
 
-        bot.setActivity(Activity.playing("Genshin Impact")).setStatus(OnlineStatus.ONLINE);
+        botManager = builder.build();
 
-        shardmanager = bot.build();
 
-        bot.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.GUILD_PRESENCES);
-
-        shardmanager.addEventListener(new EventListener() , new commandManager());
     }
 
     private static String getenvToken() {
