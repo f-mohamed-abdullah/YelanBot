@@ -27,11 +27,11 @@ public class CommandManager extends ListenerAdapter {
         switch (command) {
             case "showallroles" -> {
                 event.deferReply().queue();
-                String response = "";
+                StringBuilder response = new StringBuilder();
                 for (Role role : event.getGuild().getRoles()) {
-                    response += role.getAsMention() + "\n";
+                    response.append(role.getAsMention()).append("\n");
                 }
-                event.getHook().sendMessage(response).queue();
+                event.getHook().sendMessage(response.toString()).queue();
             }
             case "ily" -> {
                 ArrayList<String> cutePicsofYelan = new ArrayList<>();
@@ -54,12 +54,16 @@ public class CommandManager extends ListenerAdapter {
             case "hug" -> {
                 ArrayList<String> hugPicsofgenshin = new ArrayList<>();
 
-                hugPicsofgenshin.add("images/hug/hug2.jpeg");
+                hugPicsofgenshin.add("images/hug/hug-1.gif");
+                hugPicsofgenshin.add("images/hug/hug-2.jpeg");
                 hugPicsofgenshin.add("images/hug/hug-3.jpeg");
                 hugPicsofgenshin.add("images/hug/hug-4.jpeg");
-                hugPicsofgenshin.add("images/hug/hug-5.jpg");
+                hugPicsofgenshin.add("images/hug/hug-5.jpeg");
                 hugPicsofgenshin.add("images/hug/hug-6.jpg");
                 hugPicsofgenshin.add("images/hug/hug-7.jpg");
+                hugPicsofgenshin.add("images/hug/hug-8.gif");
+                hugPicsofgenshin.add("images/hug/hug-9.gif");
+
 
                 OptionMapping hugOption = event.getOption("user");
 
