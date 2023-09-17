@@ -17,14 +17,14 @@
    
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java -->
+        <!-- dotenv-java dependency -->
         <dependency>
             <groupId>io.github.cdimascio</groupId>
             <artifactId>dotenv-java</artifactId>
             <version>3.0.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.dv8tion/JDA -->
+        <!-- JDA dependency -->
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
