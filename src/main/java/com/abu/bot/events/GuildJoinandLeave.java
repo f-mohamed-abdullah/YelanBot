@@ -1,3 +1,10 @@
+/*
+* This class for greetings for member join and leave in the discord server
+* It send greeting with pictures
+*/
+
+
+
 package com.abu.bot.events;
 
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
