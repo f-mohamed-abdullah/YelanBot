@@ -15,10 +15,13 @@ public class GuildJoinandLeave extends ListenerAdapter {
 
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
+        // Get the joined member name from discord server
         String member = event.getMember().getAsMention();
 
+        // It is the greeting message for member who join in the discord server
         String message = "Welcome to the Server </3 "+ member+" ❤️";
 
+        // but it only send in the server's system channel
         event.getGuild().getSystemChannel().sendMessage(message).queue();
 
     }
