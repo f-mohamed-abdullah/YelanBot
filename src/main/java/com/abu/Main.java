@@ -1,3 +1,9 @@
+/*
+* This is an discord bot named yelan
+* It's gonna be a multi-purpose bot
+*/
+
+
 package com.abu;
 
 import com.abu.bot.yelanBot;
