@@ -30,7 +30,7 @@ public class yelanBot {
 
     private static String getenvToken() {
         Dotenv config = Dotenv.configure().load();
-
+        // Get and return the token from .env file
         return config.get("TOKEN");
     }
 
