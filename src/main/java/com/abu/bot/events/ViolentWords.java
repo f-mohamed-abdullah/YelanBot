@@ -1,6 +1,6 @@
 package com.abu.bot.events;
 
-import net.dv8tion.jda.api.entities.Member;
+
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -15,7 +15,9 @@ public class ViolentWords extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
 
-        String[] dontusethesewords = {"fuck","bitch","bastard","dick","pussy","boobs","motherfucker","asshole","nigga","ass",
+
+
+        String[] dontusethesewords = {"fuck","bitch","bastard","dick","pussy","boobs","motherfucker","asshole","nigga",
                                         "cum","slut","whore","cunt"};
 
         ArrayList<String> angrypicspath = new ArrayList<>();
@@ -32,11 +34,10 @@ public class ViolentWords extends ListenerAdapter {
                 int index = new Random().nextInt(angrypicspath.size());
                 String path = angrypicspath.get(index);
                 File f = new File(path);
-//                event.getGuild().getSystemChannel().sendFiles(FileUpload.fromData(f)).queue();
                 User user = event.getAuthor();
                 user.openPrivateChannel().flatMap(channel -> channel.sendFiles(FileUpload.fromData(f))).queue();
                 user.openPrivateChannel().flatMap(channel -> channel.sendMessage("Hey,Don't use vulger words on "+event.getGuild().getName()+" Server !!!")).queue();
-//                event.getGuild().getSystemChannel().sendMessage(event.getMember().getAsMention()+" Don't use violent words in server!!!").queue();
+
             }
         }
     }

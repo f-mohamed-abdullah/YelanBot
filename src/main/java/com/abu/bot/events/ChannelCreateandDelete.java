@@ -7,6 +7,8 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 public class ChannelCreateandDelete extends ListenerAdapter {
 
 
+
+
     @Override
     public void onChannelCreate(ChannelCreateEvent event) {
         String newChannel = event.getChannel().getAsMention();
@@ -14,6 +16,8 @@ public class ChannelCreateandDelete extends ListenerAdapter {
         String message = newChannel+" channel was created in the "+event.getGuild().getName();
 
        event.getGuild().getSystemChannel().sendMessage(message).queue();
+
+
     }
 
     @Override
