@@ -24,30 +24,25 @@ public class GuildJoinandLeave extends ListenerAdapter {
         // Get the joined member name from discord server
         String member = event.getMember().getAsMention();
 
-//        ArrayList<StringBuilder> message = new ArrayList<>();
-//        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"!\n" +
-//                "\n" +
-//                "We're thrilled to have you here. Please take a moment to read the rules in the #rules channel and introduce yourself in #introductions.\n" +
-//                "\n" +
-//                "If you have any questions or need assistance, feel free to reach out to our friendly staff members. Enjoy your time here!\n"));
-//
-//        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"!\n" +
-//                "\n" +
-//                "We're glad you're here! Please read the rules in #rules and introduce yourself in #introductions. If you have any questions or need assistance, our friendly staff is here to help.\n" +
-//                "\n" +
-//                "Enjoy your stay and have fun chatting with the community!\n"));
-//
-//        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"! Read #rules and say hi in #introductions. Enjoy your time here!\n"));
+        ArrayList<StringBuilder> message = new ArrayList<>();
+        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"!\n" +
+                "\n" +
+                "We're thrilled to have you here. Please take a moment to read the rules in the #rules channel and introduce yourself in #introductions.\n" +
+                "\n" +
+                "If you have any questions or need assistance, feel free to reach out to our friendly staff members. Enjoy your time here!\n"));
 
-//        int index = new Random().nextInt(message.size());
+        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"!\n" +
+                "\n" +
+                "We're glad you're here! Please read the rules in #rules and introduce yourself in #introductions. If you have any questions or need assistance, our friendly staff is here to help.\n" +
+                "\n" +
+                "Enjoy your stay and have fun chatting with the community!\n"));
 
-        String message = "Welcome to the server "+member+" \n take a look \n";
-        StringBuilder sb = new StringBuilder(message);
+        message.add(new StringBuilder("\uD83D\uDC4B Welcome to "+event.getGuild().getName()+"! Read #rules and say hi in #introductions. Enjoy your time here!\n"));
 
-        for(TextChannel ch : event.getGuild().getTextChannels()){
-            sb.append(ch.getName()).append("\n");
-        }
-        event.getGuild().getSystemChannel().sendMessage(sb.toString()).queue();
+        int index = new Random().nextInt(message.size());
+
+
+        event.getGuild().getSystemChannel().sendMessage(message.get(index)).queue();
 
     }
 
