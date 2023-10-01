@@ -1,9 +1,4 @@
-# This is an discord bot inspired by an game character named yelan
+![yelan-1](https://github.com/f-mohamed-abdullah/YelanBot/assets/115330277/26d1134c-478d-45ff-afbe-1c76d5210f87)
 
-# This bot is half developed and it was not hosted on online
-
-# It is an multi-purpose bot including music bot and many more in single bot
-
-# You can also add this bot in your server
-
+# YelanBot for discord servers
 
