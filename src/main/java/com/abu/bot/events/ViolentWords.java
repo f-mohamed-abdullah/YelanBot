@@ -5,13 +5,14 @@ import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.utils.FileUpload;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class ViolentWords extends ListenerAdapter {
 
+
+    // This method is used for give warning to server members for using badwords on the chat
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
 
@@ -36,7 +37,7 @@ public class ViolentWords extends ListenerAdapter {
                 File f = new File(path);
                 User user = event.getAuthor();
                 user.openPrivateChannel().flatMap(channel -> channel.sendFiles(FileUpload.fromData(f))).queue();
-                user.openPrivateChannel().flatMap(channel -> channel.sendMessage("Hey,Don't use vulger words on "+event.getGuild().getName()+" Server !!!")).queue();
+                user.openPrivateChannel().flatMap(channel -> channel.sendMessage("Hey,Don't use badwords on "+event.getGuild().getName()+" Server !!!")).queue();
 
             }
         }

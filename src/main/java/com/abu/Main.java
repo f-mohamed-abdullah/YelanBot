@@ -1,6 +1,6 @@
 /*
-* This is an discord bot named yelan
-* It's goint to be a multi-purpose bot
+* This is a discord bot named yelan
+* It's goint to be a multipurpose bot
 */
 
 

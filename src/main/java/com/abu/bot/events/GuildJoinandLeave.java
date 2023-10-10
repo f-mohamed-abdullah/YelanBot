@@ -1,13 +1,12 @@
 /*
 * This class for greetings for member join and leave in the discord server
-* It send greeting with pictures
+* It sends greeting with pictures
 */
 
 
 
 package com.abu.bot.events;
 
-import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -19,6 +18,7 @@ public class GuildJoinandLeave extends ListenerAdapter {
 
 
 
+    // This method is for greeting for joining members in server
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
         // Get the joined member name from discord server
@@ -46,6 +46,7 @@ public class GuildJoinandLeave extends ListenerAdapter {
 
     }
 
+    // This method for leaved member fom server
     @Override
     public void onGuildMemberRemove(GuildMemberRemoveEvent event) {
         String member = event.getMember().getAsMention();
