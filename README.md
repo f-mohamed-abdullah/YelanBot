@@ -1,9 +1,10 @@
-# This is an discord bot inspired by an game character named yelan
 
-# This bot is half developed and it was not hosted on online
-
-# It is an multi-purpose bot including music bot and many more in single bot
-
-# You can also add this bot in your server
-
-
+![Yelan-Discord-Server-Banner](https://discordapp.com/api/guilds/1150429036833677433/widget.png?style=banner2)
+# YelanBot for discord servers
+## This is an multi prupose discord bot 
+- ✅ Badwords Detection and warning.
+- ✅ Guild member join and leave greetings.
+- ✅ Slash commands are available.
+- ❌ Birthday greetings.
+- ✅ Interact with users by slash commands
+- ❌ Music bot will be addded soon...
