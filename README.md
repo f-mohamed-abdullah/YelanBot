@@ -15,7 +15,7 @@ YelanBot is a Discord bot for servers.
 
 Provide instructions on how to invite the YelanBot to your Discord server and set it up:
 
-1. Go to the [YelanBot Invite Link](https://discord.com/oauth2/authorize?client_id=YOUR_BOT_CLIENT_ID&scope=bot&permissions=YOUR_PERMISSIONS).
+1. Go to the [YelanBot Invite Link](https://discord.com/oauth2/authorize?client_id=1151096857515278377&permissions=8&scope=bot).
 2. Authorize the bot on your server.
 3. [Optional] Set up any required environment variables or configurations.
 
