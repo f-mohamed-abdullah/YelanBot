@@ -4,8 +4,7 @@
 
 # YelanBot
 
-YelanBot is a Discord bot that [briefly describe what the bot does or its purpose].
-
+YelanBot is a Discord bot for servers.
 ## Features
 
 - List the key features and functionalities of your bot.
