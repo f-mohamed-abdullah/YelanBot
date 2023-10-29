@@ -1,6 +1,5 @@
 
-![yelan-burst-2](https://github.com/f-mohamed-abdullah/YelanBot/assets/115330277/2a129f8c-0050-4112-8fa0-75f8800a503a)
-
+![yelan-genshin-impact](https://github.com/f-mohamed-abdullah/YelanBot/assets/115330277/1a577634-3f66-46c5-b8c8-c1ea9e38407b)
 
 # YelanBot
 
