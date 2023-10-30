@@ -4,12 +4,7 @@
 # YelanBot
 
 YelanBot is a Discord bot for servers.
-## Features
 
-- List the key features and functionalities of your bot.
-- For example:
-  - Command1: Description of what Command1 does.
-  - Command2: Description of what Command2 does.
 
 ## Installation
 
@@ -19,16 +14,7 @@ Provide instructions on how to invite the YelanBot to your Discord server and se
 2. Authorize the bot on your server.
 3. [Optional] Set up any required environment variables or configurations.
 
-## Usage
 
-Explain how to use the bot and provide examples of commands:
-
-- Command1: `!command1 [argument]` - Description of how to use Command1.
-- Command2: `!command2 [argument]` - Description of how to use Command2.
-
-## Configuration
-
-Explain any necessary configuration or setup steps, if applicable.
 
 ## Contributing
 
