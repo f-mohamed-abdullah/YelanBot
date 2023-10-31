@@ -22,7 +22,7 @@ We welcome contributions from the community. To contribute to this project, foll
 
 1. Fork this repository.
 2. [Optional]Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
+3. Make your changes and commit them on main branch.
 4. Create a pull request with a clear description of your changes.
 
 ## License
