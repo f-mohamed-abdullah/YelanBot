@@ -21,7 +21,7 @@ Provide instructions on how to invite the YelanBot to your Discord server and se
 We welcome contributions from the community. To contribute to this project, follow these steps:
 
 1. Fork this repository.
-2. Create a new branch for your feature or bug fix.
+2. [Optional]Create a new branch for your feature or bug fix.
 3. Make your changes and commit them.
 4. Create a pull request with a clear description of your changes.
 
