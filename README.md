@@ -1,7 +1,7 @@
 
 ![yelan-genshin-impact](https://github.com/f-mohamed-abdullah/YelanBot/assets/115330277/1a577634-3f66-46c5-b8c8-c1ea9e38407b)
 
-# YelanBot
+# 🚧 YelanBot isn't hosted 🚧
 
 YelanBot is a Discord bot for servers.
 
