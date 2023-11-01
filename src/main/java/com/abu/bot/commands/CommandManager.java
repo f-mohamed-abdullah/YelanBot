@@ -53,7 +53,7 @@ public class CommandManager extends ListenerAdapter {
             }
             case "hiii_yelan" -> {
                 String username = event.getUser().getAsMention();
-                event.getChannel().sendMessage("Hello "+username+" ❤️").queue();
+                event.reply("Hello "+username+" ❤️❤️❤️").queue();
             }
             case "hug" -> {
                 ArrayList<String> hugPicsofgenshin = new ArrayList<>();

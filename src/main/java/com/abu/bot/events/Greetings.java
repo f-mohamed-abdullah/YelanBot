@@ -42,8 +42,8 @@ public class Greetings extends ListenerAdapter {
                 LocalTime MorningTimeAfter = LocalTime.of(6,1);
                 LocalTime MorningTimeBefore = LocalTime.of(6,2);
 
-                LocalTime NightTimeAfter = LocalTime.of(21, 25);
-                LocalTime NightTimeBefore = LocalTime.of(21, 26);
+                LocalTime NightTimeAfter = LocalTime.of(21, 4);
+                LocalTime NightTimeBefore = LocalTime.of(21, 5);
                 if (now.isAfter(MorningTimeAfter) && now.isBefore(MorningTimeBefore)){
                     int index = new Random().nextInt(MorningMessageList.size());
 
