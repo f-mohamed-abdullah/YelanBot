@@ -1,6 +1,5 @@
 package com.abu.bot.events;
 
-import net.dv8tion.jda.api.events.message.GenericMessageEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -47,6 +46,7 @@ public class Greetings extends ListenerAdapter {
                 LocalTime NightTimeBefore = LocalTime.of(21, 26);
                 if (now.isAfter(MorningTimeAfter) && now.isBefore(MorningTimeBefore)){
                     int index = new Random().nextInt(MorningMessageList.size());
+
                     event.getJDA().getTextChannelById("1150429037370556494").sendMessage(MorningMessageList.get(index)).queue();
                 }
                 else if(now.isAfter(NightTimeAfter) && now.isBefore(NightTimeBefore)){

@@ -51,6 +51,10 @@ public class CommandManager extends ListenerAdapter {
                 event.replyFiles(FileUpload.fromData(f)).queue();
                 event.getHook().sendMessage("I Love You too " + username + " </3 !!!").queue();
             }
+            case "hiii_yelan" -> {
+                String username = event.getUser().getAsMention();
+                event.getChannel().sendMessage("Hello "+username+" ❤️").queue();
+            }
             case "hug" -> {
                 ArrayList<String> hugPicsofgenshin = new ArrayList<>();
 
@@ -91,6 +95,7 @@ public class CommandManager extends ListenerAdapter {
 
         commandData.add(Commands.slash("ily","Say I Love You </3 to yelan"));
         commandData.add(Commands.slash("showallroles","See all roles on server"));
+        commandData.add(Commands.slash("hiii_yelan","say hi to yelan"));
 
 //        OptionData option1 = new OptionData(OptionType.USER,"username","hug the user you want",false);
         OptionData option2 = new OptionData(OptionType.MENTIONABLE,"user","hugging");
