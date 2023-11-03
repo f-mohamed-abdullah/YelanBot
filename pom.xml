@@ -14,8 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-   
-
 
     <dependencies>
         <!-- dotenv-java dependency -->
@@ -32,9 +30,13 @@
             <version>5.0.0-beta.12</version>
         </dependency>
 
-        
-
-
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
