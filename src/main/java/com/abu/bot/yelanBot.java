@@ -5,7 +5,6 @@ import com.abu.bot.events.ChannelCreateandDelete;
 import com.abu.bot.events.Greetings;
 import com.abu.bot.events.GuildJoinandLeave;
 import com.abu.bot.events.ViolentWords;
-import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -29,6 +28,8 @@ public class yelanBot {
     }
 
     private static String getenvToken() {
+
+        // getting environmental variables
         return System.getenv("TOKEN");
     }
 
