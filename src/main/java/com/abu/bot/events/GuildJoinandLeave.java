@@ -18,7 +18,7 @@ public class GuildJoinandLeave extends ListenerAdapter {
 
 
 
-    // This method is for greeting for joining members in server
+    // This method is for greeting the joining members in server
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
         // Get the joined member name from discord server
