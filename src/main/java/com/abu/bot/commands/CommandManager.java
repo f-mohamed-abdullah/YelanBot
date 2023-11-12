@@ -25,6 +25,12 @@ public class CommandManager extends ListenerAdapter {
         String command = event.getName();
 
         switch (command) {
+            // This command show the information about discord bot
+            case "info" -> {
+                event.reply("- ***Yelan*** is an Multipurpose discord bot 🤖.\n" +
+                        "- Inspired from genshin impact pc game 🎮 character.").queue();
+            }
+            // This command show all roles available in server
             case "showallroles" -> {
                 event.deferReply().queue();
                 StringBuilder response = new StringBuilder();
@@ -93,6 +99,7 @@ public class CommandManager extends ListenerAdapter {
     public void onGuildReady(GuildReadyEvent event) {
         List<CommandData> commandData = new ArrayList<>();
 
+        commandData.add(Commands.slash("info","Information about yelan bot"));
         commandData.add(Commands.slash("ily","Say I Love You </3 to yelan"));
         commandData.add(Commands.slash("showallroles","See all roles on server"));
         commandData.add(Commands.slash("hiii_yelan","say hi to yelan"));
