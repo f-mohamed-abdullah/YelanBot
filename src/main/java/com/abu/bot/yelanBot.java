@@ -28,6 +28,8 @@ public class yelanBot {
     }
 
     private static String getenvToken() {
+
+        // getting environmental variables
         return System.getenv("TOKEN");
     }
 
