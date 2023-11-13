@@ -48,6 +48,7 @@ public class Greetings extends ListenerAdapter {
                     int index = new Random().nextInt(MorningMessageList.size());
 
                     event.getJDA().getTextChannelById("1150429037370556494").sendMessage(MorningMessageList.get(index)).queue();
+
                 }
                 else if(now.isAfter(NightTimeAfter) && now.isBefore(NightTimeBefore)){
                     //event.getJDA().getTextChannelById("").sendFiles().queue();

@@ -18,8 +18,8 @@ public class ViolentWords extends ListenerAdapter {
 
 
 
-        String[] dontusethesewords = {"fuck","bitch","bastard","dick","pussy","boobs","motherfucker","asshole","nigga",
-                                        "cum","slut","whore","cunt"};
+        String[] dontusethesewords = {"fuck","bitch","bastard","dick","pussy","boobs","boob","motherfucker","asshole","nigga",
+                                        "cum","slut","whore","cunt"," ass"};
 
         ArrayList<String> angrypicspath = new ArrayList<>();
         angrypicspath.add("images/angry/angry-1.jpeg");
