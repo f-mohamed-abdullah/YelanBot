@@ -1,3 +1,9 @@
+
+<center>
+<img src="https://dthezntil550i.cloudfront.net/70/latest/702206272150426760019719131/b04027eb-6c0a-42dc-b783-172b600fb1b4.png" width=120px>
+</center>
+
+
 # Yelan Discord Bot
 
 ![jda-version](https://img.shields.io/maven-metadata/v.svg?color=blue&label=maven-central&metadataUrl=https%3A%2F%2Frepo1.maven.org%2Fmaven2%2Fnet%2Fdv8tion%2FJDA%2Fmaven-metadata.xml)
