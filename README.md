@@ -44,11 +44,11 @@
 # Contributing
 Contributions to this repository are welcome. If you find a bug, have a feature request, or want to contribute in any other way, please follow these steps:
 
-1) Fork the repository.
-2) Create a new branch for your feature or bug fix or you can work on the main branch too.
-3) Make your changes and commit them with descriptive commit messages.
-4) Push your changes to your forked repository.
-5)Create a PR against the main branch of this repository, describing your changes and the problem or feature you're addressing.
+- Fork the repository.
+-Create a new branch for your feature or bug fix or you can work on the main branch too.
+- Make your changes and commit them with descriptive commit messages.
+- Push your changes to your forked repository.
+- Create a PR against the main branch of this repository, describing your changes and the problem or feature you're addressing.
 
 # License
 This project is licensed under the <a href="https://en.wikipedia.org//wiki/MIT_License">MIT License</a>, which means you are free to use, modify, and distribute it as you see fit. Please refer to the [License](LICENSE) file for more details.
