@@ -9,7 +9,5 @@ public class Main {
 
         yelanBot yelan = new yelanBot();
 
-
-
     }
 }

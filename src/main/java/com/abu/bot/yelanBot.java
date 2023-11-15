@@ -1,12 +1,10 @@
 package com.abu.bot;
 
 import com.abu.bot.commands.CommandManager;
-import com.abu.bot.events.ChannelCreateandDelete;
-import com.abu.bot.events.Greetings;
-import com.abu.bot.events.GuildJoinandLeave;
-import com.abu.bot.events.ViolentWords;
+import com.abu.bot.events.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
 
@@ -20,8 +18,10 @@ public class yelanBot {
         JDABuilder builder = JDABuilder.createDefault(token);
 
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.MESSAGE_CONTENT,GatewayIntent.GUILD_PRESENCES);
-        builder.addEventListeners(new ChannelCreateandDelete(),new CommandManager(),new GuildJoinandLeave(),new Greetings(),new ViolentWords());
-
+        builder.addEventListeners(new ChannelCreateandDelete(),new CommandManager(),new GuildJoinandLeave(),new Greetings(),
+                                    new ViolentWords(),new RoleCreateandDelete());
+//        builder.setActivity(Activity.listening("Shadow in the Rain"));
+        builder.setActivity(Activity.playing("Genshin Impact"));
         botManager = builder.build();
 
 
