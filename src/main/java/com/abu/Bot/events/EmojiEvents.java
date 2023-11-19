@@ -10,10 +10,16 @@ public class EmojiEvents extends ListenerAdapter {
     public void onEmojiAdded(EmojiAddedEvent event) {
         String message = "*** New Emoji is added!!! ***";
 
+
+
     }
 
     @Override
     public void onEmojiRemoved(EmojiRemovedEvent event) {
+
+        String emojiName = event.getEmoji().getName();
+        String message = emojiName+" emoji was deleted from the server";
+
 
     }
 }
