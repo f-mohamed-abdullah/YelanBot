@@ -14,12 +14,18 @@ public class yelanBot {
 
     JDA botManager ;
     public yelanBot() {
-        String token = getenvToken();
+        String token = getEnvToken();
         JDABuilder builder = JDABuilder.createDefault(token);
 
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.MESSAGE_CONTENT,GatewayIntent.GUILD_PRESENCES);
-        builder.addEventListeners(new ChannelCreateandDelete(),new CommandManager(),new GuildJoinandLeave(),new Greetings(),
-                                    new ViolentWords(),new RoleCreateandDelete());
+        builder.addEventListeners(new ChannelCreateandDelete());
+        builder.addEventListeners(new EmojiEvents());
+        builder.addEventListeners(new RoleCreateandDelete());
+        builder.addEventListeners(new ViolentWords());
+        builder.addEventListeners(new Greetings());
+        builder.addEventListeners(new CommandManager());
+        builder.addEventListeners(new GuildJoinandLeave());
+
 //        builder.setActivity(Activity.listening("Shadow in the Rain"));
         builder.setActivity(Activity.playing("Genshin Impact"));
         botManager = builder.build();
@@ -27,7 +33,7 @@ public class yelanBot {
 
     }
 
-    private static String getenvToken() {
+    private static String getEnvToken() {
 
         // getting environmental variables
         return System.getenv("TOKEN");
