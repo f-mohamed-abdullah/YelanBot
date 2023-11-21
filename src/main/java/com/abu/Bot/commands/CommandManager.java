@@ -1,8 +1,11 @@
 package com.abu.Bot.commands;
 
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
+import net.dv8tion.jda.api.events.message.MessageEmbedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionMapping;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
@@ -11,6 +14,7 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.utils.FileUpload;
 
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +33,15 @@ public class CommandManager extends ListenerAdapter {
             case "info" -> {
                 event.reply("- ***Yelan*** is an Multipurpose discord bot 🤖.\n" +
                         "- Inspired from genshin impact pc game 🎮 character.").queue();
+//                EmbedBuilder embed = new EmbedBuilder();
+//                embed.setColor(new Color(125,38,205));
+//                embed.setTitle("YELAN BOT");
+//                embed.setDescription("- ***Yelan*** is an Multipurpose discord bot 🤖.\n" +
+//                        "- Inspired from genshin impact pc game 🎮 character.");
+//                MessageEmbed mess = embed.build();
+//
+//                event.reply(String.valueOf(mess)).queue();
+
             }
             // This command show all roles available in server
             case "showallroles" -> {
