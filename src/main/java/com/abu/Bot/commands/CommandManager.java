@@ -99,6 +99,10 @@ public class CommandManager extends ListenerAdapter {
                 event.replyFiles(FileUpload.fromData(f)).queue();
                 event.getHook().sendMessage(huggedUser + " was hugged by " + huggedBy + " 🫂❤️").queue();
             }
+            case "ping" ->{
+                event.reply("Pong!!!").queue();
+            }
+
         }
     }
 
@@ -112,6 +116,7 @@ public class CommandManager extends ListenerAdapter {
         commandData.add(Commands.slash("ily","Say I Love You </3 to yelan"));
         commandData.add(Commands.slash("showallroles","See all roles on server"));
         commandData.add(Commands.slash("hiii_yelan","say hi to yelan"));
+        commandData.add(Commands.slash("ping","You say ping and i say pong"));
 
 //        OptionData option1 = new OptionData(OptionType.USER,"username","hug the user you want",false);
         OptionData option2 = new OptionData(OptionType.MENTIONABLE,"user","hugging");
