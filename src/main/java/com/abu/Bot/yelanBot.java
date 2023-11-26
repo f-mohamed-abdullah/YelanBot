@@ -25,6 +25,7 @@ public class yelanBot {
         builder.addEventListeners(new Greetings());
         builder.addEventListeners(new CommandManager());
         builder.addEventListeners(new GuildJoinandLeave());
+        builder.addEventListeners(new Information());
 
 //        builder.setActivity(Activity.listening("Shadow in the Rain"));
         builder.setActivity(Activity.playing("Genshin Impact"));
