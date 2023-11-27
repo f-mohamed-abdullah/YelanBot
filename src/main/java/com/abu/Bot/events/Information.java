@@ -21,7 +21,7 @@ public class Information extends ListenerAdapter {
             embed.setColor(new Color(76, 0, 130));
             embed.setDescription("- ***Yelan*** is an Multipurpose discord bot 🤖\n"+
                     "- Inspired from genshin impact pc game 🎮 character.");
-            embed.setThumbnail("https://image.tensorartassets.com/posts/images/612675178081572992/0604a0db-1835-4de3-b769-360840a0d991.jpg");
+            embed.setThumbnail("https://media.tenor.com/SPkSdlAdNaUAAAAd/yelan-genshin-yelan.gif");
             embed.setFooter("See you again...");
 
             event.getGuild().getTextChannelById(messageRecievedChannel).sendMessage("").setEmbeds(embed.build()).queue();
