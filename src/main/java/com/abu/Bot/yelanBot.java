@@ -1,5 +1,6 @@
 package com.abu.Bot;
 
+import com.abu.Bot.Embeds.EmbeddedMessageBuilder;
 import com.abu.Bot.commands.CommandManager;
 import com.abu.Bot.events.*;
 import net.dv8tion.jda.api.JDA;
@@ -26,6 +27,7 @@ public class yelanBot {
         builder.addEventListeners(new CommandManager());
         builder.addEventListeners(new GuildJoinandLeave());
         builder.addEventListeners(new Information());
+        builder.addEventListeners(new EmbeddedMessageBuilder());
 
 //        builder.setActivity(Activity.listening("Shadow in the Rain"));
         builder.setActivity(Activity.playing("Genshin Impact"));
