@@ -29,6 +29,7 @@ public class yelanBot {
         builder.addEventListeners(new GuildJoinandLeave());
         builder.addEventListeners(new Information());
         builder.addEventListeners(new music());
+        builder.addEventListeners(new developer());
 //        builder.addEventListeners(new EmbeddedMessageBuilder());
 
 //        builder.setActivity(Activity.listening("Shadow in the Rain"));
