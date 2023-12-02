@@ -15,7 +15,6 @@ public class Information extends ListenerAdapter {
         if(event.getMessage().getContentRaw().equals("!info"))
         {
             EmbedBuilder embeds = new EmbeddedMessageBuilder().getEmbeds();
-
             embeds.setTitle("Yelan Discord Bot");
             embeds.setUrl("https://github.com/mdxabu/YelanBot");
             embeds.setDescription("It is an multi-purpose discord bot");

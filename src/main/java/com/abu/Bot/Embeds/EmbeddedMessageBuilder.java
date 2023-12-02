@@ -2,7 +2,6 @@ package com.abu.Bot.Embeds;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.interactions.components.buttons.Button;
 
 import java.awt.*;
 
