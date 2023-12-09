@@ -32,6 +32,7 @@ public class yelanBot {
         builder.addEventListeners(new music());
         builder.addEventListeners(new developer());
         builder.addEventListeners(new EmbeddedMessageBuilder());
+        builder.addEventListeners(new AnonymousMessageSender());
 
 //        builder.setActivity(Activity.listening("Shadow in the Rain"));
         builder.setActivity(Activity.playing("Genshin Impact"));

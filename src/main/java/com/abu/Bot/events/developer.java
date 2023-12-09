@@ -19,10 +19,12 @@ public class developer extends ListenerAdapter {
             EmbedBuilder devEmbed = new EmbeddedMessageBuilder().getEmbeds();
 
             devEmbed.setTitle("mdxabu","https://github.com/mdxabu");
-            devEmbed.setThumbnail("https://media.tenor.com/cKkNLp8vVBEAAAAC/patrick-bateman-american-psycho.gif");
+            devEmbed.setThumbnail("https://c.tenor.com/nxccQmb_0ksAAAAd/tenor.gif");
             devEmbed.setColor(new Color(255, 0, 0));
             devEmbed.setDescription("I'm developing this bot for fun!");
+            devEmbed.setImage("https://c.tenor.com/Q4fpWPR5xjwAAAAC/tenor.gif");
             event.getGuild().getTextChannelById(messagedChanel).sendMessage("").setEmbeds(devEmbed.build()).queue();
+            event.getMessage().delete().queue();
         }
     }
 }
