@@ -28,6 +28,7 @@
 | Role Color Update| ✅ |
 | Channel Create| ✅ |
 | Greeting| ✅ |
+| Anonymous Message Sending| ✅ |
 
 # Installation
 - Copy this command and run it in git bash/terminal.
