@@ -23,7 +23,7 @@ public class yelanBot {
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS,GatewayIntent.GUILD_MESSAGES,GatewayIntent.MESSAGE_CONTENT,GatewayIntent.GUILD_PRESENCES);
         builder.addEventListeners(new ChannelCreateandDelete());
         builder.addEventListeners(new EmojiEvents());
-        builder.addEventListeners(new RoleCreateandDelete());
+//        builder.addEventListeners(new RoleCreateandDelete());
         builder.addEventListeners(new ViolentWords());
         builder.addEventListeners(new Greetings());
         builder.addEventListeners(new CommandManager());
