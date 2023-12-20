@@ -7,12 +7,13 @@ import java.awt.*;
 
 public class EmbeddedMessageBuilder extends ListenerAdapter {
 
-    EmbedBuilder embed;
+    static EmbedBuilder embed;
 
-    public EmbeddedMessageBuilder() {
-        this.embed = new EmbedBuilder();
-        this.embed.setColor(new Color(76, 0, 130));
-        embed.setThumbnail("https://media.tenor.com/SPkSdlAdNaUAAAAd/yelan-genshin-yelan.gif");
-        embed.setFooter("See you again...");
+    public static EmbedBuilder getEmbeddedMessageBuilder() {
+        embed = new EmbedBuilder();
+        embed.setColor(new Color(76, 0, 130));
+//        embed.setThumbnail("https://media.tenor.com/SPkSdlAdNaUAAAAd/yelan-genshin-yelan.gif");
+//        embed.setFooter("See you again...");
+        return embed;
     }
 }

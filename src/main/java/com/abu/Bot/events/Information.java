@@ -13,15 +13,18 @@ public class Information extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        EmbeddedMessageBuilder embed = new EmbeddedMessageBuilder();
-        String messageRecievedChannel = event.getMessage().getChannelId();
+        EmbedBuilder embed = EmbeddedMessageBuilder.getEmbeddedMessageBuilder();
 
-        if(event.getMessage().getContentRaw().equals("!info"))
-        {
 
-//           embed.
+//        if(event.getMessage().getContentRaw().equals("!info"))
+//        {
+//
+////           embed.
+//
+//            event.getGuild().getTextChannelById(messageRecievedChannel).sendMessage("").setEmbeds(embed.build()).queue();
+//        }
+        if (event.getMessage().getContentRaw().substring(0,7).equals("-avatar:")){
 
-            event.getGuild().getTextChannelById(messageRecievedChannel).sendMessage("").setEmbeds(embed.build()).queue();
         }
 
     }

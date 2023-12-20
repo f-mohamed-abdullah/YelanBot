@@ -1,6 +1,9 @@
 package com.abu.Bot.commands;
 
+import com.abu.Bot.Embeds.EmbeddedMessageBuilder;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Role;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.guild.GuildReadyEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -11,7 +14,10 @@ import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.utils.FileUpload;
 
+import javax.print.DocFlavor;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -86,10 +92,23 @@ public class CommandManager extends ListenerAdapter {
                 event.replyFiles(FileUpload.fromData(f)).queue();
                 event.getHook().sendMessage(huggedUser + " was hugged by " + huggedBy + " 🫂❤️").queue();
             }
+            case "avatar" ->{
+                EmbedBuilder avatarEmbed = EmbeddedMessageBuilder.getEmbeddedMessageBuilder();
+                OptionMapping avatarOption = event.getOption("user");
+                User us = avatarOption.getAsUser();
+
+                String avatarurl = us.getEffectiveAvatarUrl();
+
+
+                String avatarUser = avatarOption.getAsUser().getAsMention();
+                avatarEmbed.setImage(avatarurl);
+                event.reply("").setEmbeds(avatarEmbed.build()).queue();
+            }
             case "ping" ->{
                 event.reply("Pong!!!").queue();
             }
 
+            default -> event.reply("OOPS!!!").queue();
         }
     }
 
@@ -107,8 +126,10 @@ public class CommandManager extends ListenerAdapter {
 
 //        OptionData option1 = new OptionData(OptionType.USER,"username","hug the user you want",false);
         OptionData option2 = new OptionData(OptionType.MENTIONABLE,"user","hugging");
+        OptionData option3 = new OptionData(OptionType.MENTIONABLE,"user","Avatar");
 
         commandData.add(Commands.slash("hug","hug the user you want !!!").addOptions(option2));
+        commandData.add(Commands.slash("avatar","Avatar of the user you want to see!!!").addOptions(option3));
         event.getGuild().updateCommands().addCommands(commandData).queue();
     }
 
