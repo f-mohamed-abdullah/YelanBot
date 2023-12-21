@@ -9,16 +9,21 @@ public class EmbeddedMessageBuilder extends ListenerAdapter {
 
     static EmbedBuilder embed;
 
-    public EmbedBuilder getEmbeds(){
+
+
+
+    public static EmbedBuilder getEmbeds() {
 
         embed = new EmbedBuilder();
 
         embed = embed;
         embed.setColor(new Color(76, 0, 130));
-        embed.setThumbnail("https://media.tenor.com/SPkSdlAdNaUAAAAd/yelan-genshin-yelan.gif");
-        embed.setFooter("Take care and keep in touch!");
-
-
+//        embed.setThumbnail("https://media.tenor.com/SPkS/dlAdNaUAAAAd/yelan-genshin-yelan.gif");
+//        embed.setFooter("Take care and keep in touch!");
         return embed;
     }
+
+
+
+
 }
