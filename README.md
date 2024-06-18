@@ -1,6 +1,6 @@
-# Yelan Discord Bot
+# Raiden Discord Bot
 
-> YelanBot is a discord bot developed in Java using the JDA library.
+> Raiden is a discord bot developed in Java using the JDA library.
 
 # Events
 | Events | Finished |
